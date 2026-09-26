@@ -4,6 +4,8 @@
 
 ### 🛠 Breaking changes
 
+- Replace the deprecated `react-test-renderer` dependency with `test-renderer`, which `@testing-library/react-native` v14 requires.
+
 ### 🎉 New features
 
 ### 🐛 Bug fixes

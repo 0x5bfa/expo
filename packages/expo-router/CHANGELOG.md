@@ -4,7 +4,7 @@
 
 ### 🛠 Breaking changes
 
-- Update `expo-router/testing-library` for `@testing-library/react-native` v14. `renderRouter` and the `testRouter` helpers are now async and must be awaited, `renderRouterAsync` is removed, and the optional peer dependency range is now `>= 14.0.0`. (by [@hassankhan](https://github.com/hassankhan))
+- Update `expo-router/testing-library` for `@testing-library/react-native` v14. `renderRouter` and the `testRouter` helpers are now async and must be awaited, `renderRouterAsync` is removed, and the optional peer dependency range is now `>= 14.0.0`.
 
 ### 🎉 New features
 
