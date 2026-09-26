@@ -1748,6 +1748,16 @@ export const resizable = (
  */
 export const navigationTitle = (title: string) => createModifier('navigationTitle', { title });
 
+/**
+ * Sets an `OpenURLAction` that prefers opening URLs with an in-app browser.
+ * @param prefersInApp - Whether to prefer opening URLs in an in-app browser.
+ * @platform ios 26.0+
+ * @platform macos 26.0+
+ * @platform tvos 26.0+
+ * @see Official [SwiftUI documentation](https://developer.apple.com/documentation/swiftui/view/onopenurl(prefersinapp:)).
+ */
+export const onOpenURL = (prefersInApp: boolean) => createModifier('onOpenURL', { prefersInApp });
+
 // =============================================================================
 // Type Definitions
 // =============================================================================
@@ -1893,7 +1903,8 @@ export type BuiltInModifier =
   | ReturnType<typeof widgetURL>
   | ReturnType<typeof activityBackgroundTint>
   | ReturnType<typeof containerBackground>
-  | ReturnType<typeof navigationTitle>;
+  | ReturnType<typeof navigationTitle>
+  | ReturnType<typeof onOpenURL>;
 
 /**
  * Main ViewModifier type that supports both built-in and 3rd party modifiers.

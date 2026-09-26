@@ -6,6 +6,8 @@
 
 ### 🎉 New features
 
+- [iOS] Added the `onOpenURL` modifier for preferring in-app browser handling on iOS 26+, macOS 26+, and tvOS 26+.
+
 ### 🐛 Bug fixes
 
 ### 💡 Others

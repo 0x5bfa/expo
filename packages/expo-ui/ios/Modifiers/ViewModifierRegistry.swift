@@ -1817,6 +1817,19 @@ internal struct NavigationTitleModifier: ViewModifier, Record {
   }
 }
 
+internal struct OnOpenURLModifier: ViewModifier, Record {
+  @Field var prefersInApp: Bool = false
+
+  @ViewBuilder
+  func body(content: Content) -> some View {
+    if #available(iOS 26.0, macOS 26.0, tvOS 26.0, *) {
+      content.onOpenURL(prefersInApp: prefersInApp)
+    } else {
+      content
+    }
+  }
+}
+
 // MARK: - Built-in Modifier Registration
 
 // swiftlint:disable:next no_grouping_extension
@@ -1991,6 +2004,10 @@ extension ViewModifierRegistry {
 
     register("navigationTitle") { params, appContext, _ in
       return try NavigationTitleModifier(from: params, appContext: appContext)
+    }
+
+    register("onOpenURL") { params, appContext, _ in
+      return try OnOpenURLModifier(from: params, appContext: appContext)
     }
 
     register("navigationSplitViewStyle") { params, appContext, _ in
